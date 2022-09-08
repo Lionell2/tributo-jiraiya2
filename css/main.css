@@ -1,0 +1,331 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-size: 1.6rem;
+  }
+  
+  
+  #menu-mobile{
+    display: none;
+    padding: .8rem 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* HEADER */
+  header {
+    display: flex;
+    justify-content: center;
+    background-color: #2f3030;
+    align-items: center;
+    gap: 2rem;
+    
+  }
+  #logo img{
+    width: 250px;
+  }
+  #menu{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    font-size: 22px;
+  }
+  #menu a{
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    font-weight: bold;
+  }
+  ul a:hover{
+   background: rgba(255, 127, 80, .5);
+   text-shadow:2px 2px 3px rgba(255, 127, 80, .8) ;
+  }
+  #menu-mobile{
+    padding: .5rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+    
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    width: 750px;
+    overflow-x: hidden;
+    justify-content: space-around;
+  }
+  
+  #logo {
+    width: 250px;
+  }
+  
+  /* BANNER */
+  #banner {
+    background-image: url(../img/jiraia.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 10.4rem);
+    display: flex;
+    align-items: center;
+    padding: 1.6rem;
+  }
+  
+  #banner em {
+    font-size: 4.8rem;
+    display: block;
+    padding-left: 3rem;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+  }
+  
+  @media (max-width: 900px) {
+    #banner em {
+      font-size: 3.2rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    #banner em {
+      font-size: 2.4rem;
+    }
+  }
+  
+  /* DETAILS */
+  #geral {
+    background-image: url(../img/konoha.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 1.6rem;
+  }
+  
+  .widget {
+    background-color: burlywood;
+    max-width: 73rem;
+    margin: 0 auto;
+  }
+  
+  .widget + .widget {
+    margin-top: 1.6rem;
+  }
+  
+  .widget-title {
+    background-color: #f56e5a;
+    padding: 1rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    text-align: center;
+  }
+  
+  .widget-body {
+    padding: 1rem;
+  }
+  
+  .widget-image {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .widget-image img {
+    width: 30rem;
+    height: 20rem;
+  }
+  
+  .widget-image figure {
+    border: 3px solid #555;
+    background-color: #555;
+  }
+  
+  .widget-image figcaption {
+    padding: 0.5rem;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .biography {
+    font-weight: bold;
+    line-height: 1.5;
+  }
+  
+  .biography p + p {
+    margin-top: 2rem;
+  }
+  
+  @media (max-width: 600px) {
+    .biography {
+      font-size: 1.4rem;
+    }
+  }
+  
+  .biography h3 {
+    text-decoration: underline;
+    color: greenyellow;
+    text-shadow: 2px 2px 2px black;
+  }
+  .biography li{
+    padding-top: 1.5rem;
+  }
+  
+  /* FOOTER */
+  footer {
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    background-color: #2f3030;
+    height: 130px;
+    flex-direction: column;
+  }
+  
+  .container-footer {
+    display: flex;
+    justify-content: center;
+    width: 730px;
+    overflow-x: hidden;
+  }
+  
+  .footer-area {
+    display: flex;
+  }
+  
+  .fonts {
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 3px black;
+    text-align: center;
+  }
+  
+  .fonts a {
+    text-decoration: underline;
+    color: white;
+  }
+  
+  .fonts a:hover {
+    text-shadow: 1px 1px 2px rgb(74, 172, 204);
+  }
+  
+  .footer-copy {
+    width: 100%;
+    text-align: center;
+    align-self: end;
+    color: rgb(110, 110, 110);
+    border-top: 1px solid rgb(110, 110, 110);
+    padding-top: 10px;
+  }
+  
+  @media (max-width: 730px) {
+    #banner {
+      background-position: center;
+    }
+    header {
+      height: 130px;
+    }
+    #menu{
+      display: block;
+      background-image: url(../img/background.webp);
+      background-size: cover;
+      background-position: center;
+      width: 100vw;
+      position: absolute;
+      z-index: 1000;
+     
+     visibility: hidden;
+     overflow-y: hidden;
+     height: 0px;
+     top: 130px;
+     right: 0;
+     left: 0;
+     opacity: .0;
+     transition:.6s;
+    
+    }
+    #menu-mobile{
+      display: flex;
+      align-items: center;
+    }
+    #nav.active #menu{
+      opacity: 1;
+      height: calc(100vh - 130px);
+      visibility: visible;
+      overflow-y: auto;
+    }
+   #menu a{
+    display: block;
+    padding: 1rem 0;
+    margin: 0 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.85);
+    text-shadow: 4px 4px 3px black;
+   }
+   #menu a:hover{
+    background: rgba(0, 0, 0, 0.2);
+   }
+    .logo {
+      padding-left: 20px;
+    }
+    #hamburguer{
+      width: 20px;
+     border-top: 2px solid;
+     display: block;
+     margin-left: 5px;
+    }
+    #hamburguer::after, #hamburguer::before{
+      content: '';
+      display: block;
+      width: 20px;
+      border-top: 2px solid;
+      background: currentColor;
+      margin-top: 5px;
+      transition: .3s;
+      position: relative;
+    }
+    #nav.active #hamburguer{
+      border-top: transparent;
+    }
+    #nav.active #hamburguer::after, #nav.active #hamburguer::before{
+      color: red;
+    }
+    #nav.active #hamburguer::after{
+      rotate: 45deg;
+      
+      top: -7px;
+    }
+    #nav.active #hamburguer::before{
+      rotate:-45deg;
+      
+    }
+    .fonts a{
+      font-size: 28px;
+  
+    }
+    .fonts{
+      font-size: 28px;
+    }
+    .footer-copy{
+      font-size: 19px;
+    }
+   
+   
+    
+  
+  }
